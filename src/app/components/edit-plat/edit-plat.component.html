@@ -1,0 +1,30 @@
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Get 24/7 Support</p>
+                    <h1>EditPlat</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-9 offset-lg-2 text-center mt-100 mb-100">
+        <div class="contact-form">
+            <form #editForm="ngForm" (ngSubmit)="editPlat()">
+                <p>
+                    <input type="text" placeholder="Name" name="name" [(ngModel)]="plat.name">
+                </p>
+                <p>
+                    <input type="text" placeholder="Price" name="price" [(ngModel)]="plat.price">
+                </p>
+                
+              
+                <p class="mt-5"><input type="submit" value="Edit"></p>
+            </form>
+        </div>
+    </div>
+</div>

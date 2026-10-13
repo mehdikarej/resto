@@ -1,0 +1,37 @@
+<table class="table">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>PLATNAME</th>
+        <th>DESCRIPTION</th>
+        <th>PLATPRICE</th>
+        <th>QUANTITY</th>
+        <th>DATERESERVATION</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>PHONENUMBER</th>
+        <th>Actions</th>
+    </tr>
+  </thead> 
+ <tbody>
+    <tr  *ngFor="let m of reservationTabs">
+        <td >{{m.id}}</td>
+        <td >{{m.platName}}</td>
+        <td>{{m.description}}</td>
+         <td >{{m.platPrice}}</td>
+          <td >{{m.quantity}}</td>
+          <td>{{m.date}}</td>
+           <td >{{m.user.firstName}}</td>
+           <td>{{m.user.lastName}}</td>
+           <td>{{m.user.phoneNumber}}</td>
+           <td>
+            <button  class="btn btn-info"  (click)="displayReservation(m.id)">Display</button>
+            <button  class="btn btn-warning" (click)="editReservation(m.id)">Edit</button>
+            <button  class="btn btn-danger" (click)="deleteReservation(m.id)">Delete</button>
+           </td>
+    </tr>
+  </tbody>
+</table>
+
+
+

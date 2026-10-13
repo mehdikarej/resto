@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Chef</th>
+        <th>Actions</th>
+    </tr>
+  </thead> 
+ <tbody>
+    <tr  *ngFor="let m of platsTabs">
+        <td >{{m.id}}</td>
+        <td >{{m.name}}</td>
+        <td>{{m.description}}</td>
+         <td >{{m.price}}</td>
+          <td >{{m.chefName}}</td>
+           <td>
+            <button  class="btn btn-info"  (click)="displayPlat(m.id)">Display</button>
+            <button  class="btn btn-warning" (click)="editPlat(m.id)">Edit</button>
+            <button  class="btn btn-danger" (click)="deletePlat(m.id)">Delete</button>
+           </td>
+    </tr>
+  </tbody>
+</table>
+
+

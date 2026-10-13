@@ -1,0 +1,40 @@
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Get 24/7 Support</p>
+                    <h1>EditUser</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-9 offset-lg-2 text-center mt-100 mb-100">
+        <div class="contact-form">
+            <form #editForm="ngForm" (ngSubmit)="editUser()">
+                <p>
+                    <input type="text" placeholder="FirstName" name="fname" [(ngModel)]="user.firstName">
+                </p>
+                <p>
+                    <input type="text" placeholder="LastName" name="lname" [(ngModel)]="user.lastName">
+                </p>
+                <p>
+                    <input type="email" placeholder="Email" name="email" [(ngModel)]="user.email">
+                </p>
+                <p>
+                    <input type="text" placeholder="PhoneNumber" name="phonenumber" [(ngModel)]="user.phoneNumber">
+                </p>
+                <p>
+                    <input type="text" placeholder="Specialty" name="spec" [(ngModel)]="user.specialty">
+                </p>
+                <p>
+                    <input type="text" placeholder="Experience" name="experience" [(ngModel)]="user.experience">
+                </p>
+                <p class="mt-5"><input type="submit" value="Edit"></p>
+            </form>
+        </div>
+    </div>
+</div>

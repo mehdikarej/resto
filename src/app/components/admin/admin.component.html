@@ -1,0 +1,29 @@
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Get 24/7 Support</p>
+						<h1>Admin</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="true">Users</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#plat" role="tab" aria-controls="plat" aria-selected="false">Plats</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#reservation" role="tab" aria-controls="reservation" aria-selected="false">Reservations</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab"><app-users-table></app-users-table></div>
+  <div class="tab-pane fade" id="plat" role="tabpanel" aria-labelledby="plat-tab"><app-plats-table></app-plats-table></div>
+  <div class="tab-pane fade" id="reservation" role="tabpanel" aria-labelledby="reservation"><app-reservations-table></app-reservations-table></div>
+</div>

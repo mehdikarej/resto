@@ -1,0 +1,31 @@
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Get 24/7 Support</p>
+						<h1>Login</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center mt-100 mb-100">
+                <div class="contact-form">
+                    <form #loginForm="ngForm" (ngSubmit)="login()">
+                        <p>
+                            <input type="email" placeholder="Email" name="email" id="email" [(ngModel)]="user.email" >
+                        </p>
+                        <p>
+                            <input type="password" placeholder="password" name="password" id="password" [(ngModel)]="user.password" >
+                        </p>
+                        <p class="mt-5"><input type="submit" value="Login"></p>
+                    </form>
+                    <span class="text-danger">{{this.errorMsg}}</span>
+                </div>
+            </div>
+        </div>
+    

@@ -1,0 +1,53 @@
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Get 24/7 Support</p>
+                    <h1>Add Plat</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hero area -->
+<!-- contact form -->
+<div class="contact-from-section mt-100 mb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="form-title">
+                    <div class="contact-form">
+                        <form #formPlat="ngForm" (ngSubmit)="addPlat()">
+                            <p>
+                                <input type="text" placeholder="Name" name="name" id="name" required #name="ngModel"
+                                    [(ngModel)]="platObj.name">
+                                <span class="text-danger" *ngIf="name.invalid && name.touched">Name is Required</span>
+                            </p>
+                            <p>
+                                <input type="text" placeholder="Description" name="desc" id="desc" required
+                                    #description="ngModel" [(ngModel)]="platObj.description">
+                                <span class="text-danger" *ngIf="description.invalid && description.touched">Description
+                                    is Required</span>
+                            </p>
+                            <p><input type="number" placeholder="Price" name="pr" id="pr" required #price="ngModel"
+                                    min="1" [(ngModel)]="platObj.price">
+                                <span class="text-danger" *ngIf="price.errors?.['min']">Price Not Null</span>
+                            </p>
+                            <p class="btn"><input type="submit" value="Add"></p>
+                        </form>
+                    </div>
+                </div>
+                <div id="form_status">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end contact form -->
+
+<!-- end hero area -->

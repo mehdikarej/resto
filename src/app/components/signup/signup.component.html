@@ -1,0 +1,68 @@
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Get 24/7 Support</p>
+						<h1>Sign Up</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        <div class="row">
+            <div class="col-lg-9 offset-lg-2 text-center mt-100 mb-100">
+                <div class="contact-form">
+                    <form [formGroup]="signupForm">
+                        <p>
+                            <input type="text" placeholder="FirstName" formControlName="firstName"><div *ngIf="signupForm.controls['firstName'].invalid&&(signupForm.controls['firstName'].touched||signupForm.controls['firstName'].dirty)">
+                                <div class="text-danger " *ngIf="signupForm.controls['firstName'].errors?.['required']" >FirstName is Required</div>
+                                <div class="text-danger " *ngIf="signupForm.controls['firstName'].errors?.['minlength']">FirstName Should be at least 3 characs</div>
+                                <div class="text-danger " *ngIf="signupForm.controls['firstName'].errors?.['maxlength']">FirstName Should be at least max 10 characs</div>
+                            </div>   
+                        </p>
+                        <p>
+                            <input type="text" placeholder="LastName" formControlName="lastName"><div *ngIf="signupForm.controls['lastName'].invalid&&(signupForm.controls['lastName'].touched||signupForm.controls['lastName'].dirty)">
+                               <div class="text-danger" *ngIf="signupForm.controls['lastName'].errors?.['required']" >lastName is Required</div>
+                                <div class="text-danger" *ngIf="signupForm.controls['lastName'].errors?.['minlength']">lastName Should be at least 4 characs</div>
+                                <div class="text-danger " *ngIf="signupForm.controls['lastName'].errors?.['maxlength']">lastName Should be at least max 10 characs</div>
+                            </div>
+                        </p>
+                        <p>
+                            <input type="email" placeholder="Email" formControlName="email"><div *ngIf="signupForm.controls['email'].invalid&&(signupForm.controls['email'].touched||signupForm.controls['email'].dirty)">
+                                <div class="text-danger" *ngIf="signupForm.controls['email'].errors?.['required']">Email is required</div>
+                                <div class="text-danger" *ngIf="signupForm.controls['email'].errors?.['pattern']">Email format invalid</div>
+                            </div>
+                        <p>
+                            <input type="text" placeholder="FhoneNumber" formControlName="phoneNumber"><div *ngIf="signupForm.controls['phoneNumber'].invalid&&(signupForm.controls['phoneNumber'].touched||signupForm.controls['phoneNumber'].dirty)">
+                                <div class="text-danger" *ngIf="signupForm.controls['phoneNumber'].errors?.['required']">PhoneNumber is required</div>
+                                <div class="text-danger" *ngIf="signupForm.controls['phoneNumber'].errors?.['pattern']">PhoneNumber format invalid</div>
+                            </div>
+                        <p>
+                            <input type="password" placeholder="Password" formControlName="password"><div *ngIf="signupForm.controls['password'].invalid&&(signupForm.controls['password'].touched||signupForm.controls['password'].dirty)">
+                                <div class="text-danger" *ngIf="signupForm.controls['password'].errors?.['required']">Password is required</div>
+                                <div class="text-danger" *ngIf="signupForm.controls['password'].errors?.['minlength']">Password should be at least 4 characs</div>
+                            </div>
+                        </p>
+                         <p>
+                            <input type="text" placeholder="Specialty" formControlName="specialty" *ngIf="this.path=='/signupChief'"><div  *ngIf="signupForm.controls['specialty'].invalid&&(signupForm.controls['specialty'].touched||signupForm.controls['specialty'].dirty)">
+                                <div class="text-danger" *ngIf="signupForm.controls['specialty'].errors?.['required']">Specialty is required</div>
+                                <div class="text-danger" *ngIf="signupForm.controls['specialty'].errors?.['minlength']">Specialty should be at least 3 characs</div>
+
+                            </div>
+                        </p>
+                         <p>
+                            <input type="text" placeholder="Experience" formControlName="experience" *ngIf="this.path=='/signupChief'"><div *ngIf="signupForm.controls['experience'].invalid&&(signupForm.controls['experience'].touched||signupForm.controls['experience'].dirty)">
+                                <div class="text-danger text" *ngIf="signupForm.controls['experience'].errors?.['required']">Experience is required</div>
+                                <div class="text-danger text" *ngIf="signupForm.controls['experience'].errors?.['minlength']">Experience should be at least 4 characs</div>
+                                </div>
+                        </p>
+                        <p class="mt-5"><input type="submit" value="SignUp" (click)="signup()"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    

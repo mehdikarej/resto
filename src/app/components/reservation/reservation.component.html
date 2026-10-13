@@ -1,0 +1,40 @@
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="breadcrumb-text">
+                    <p>Get 24/7 Support</p>
+                    <h1>Reservation</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>PLATNAME</th>
+        <th>DESCRIPTION</th>
+        <th>PLATPRICE</th>
+        <th>QUANTITY</th>
+        <th>DATERESERVATION</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>PHONENUMBER</th>
+    </tr>
+  </thead> 
+   <tbody>
+    <tr *ngFor="let m of reservationTabs">
+        <td>{{m.id}}</td>
+        <td>{{m.name}}</td>
+        <td>{{m.description}}</td>
+        <td>{{m.price}}</td>
+        <td>{{m.quantity}}</td>
+        <td>{{m.date}}</td>
+        <td *ngIf="getReservation">{{m.firstName}}</td>
+        <td>{{m.lastName}}</td>
+        <td>{{m.phoneNumber}}</td>
+    </tr>
+   </tbody>

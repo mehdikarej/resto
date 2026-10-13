@@ -1,0 +1,45 @@
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="breadcrumb-text">
+					<p>Get 24/7 Support</p>
+					<h1>Plats</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- products -->
+<div class="product-section mt-150 mb-150">
+	<div class="container">
+		<div class="row">
+					<div class="d-flex align-items-center gap-3"><h3 class="mb-0">Search Plat:</h3>
+					 
+						<input type="text" placeholder="Search by name or price" name="search" [(ngModel)]="item">
+					</div>
+		</div>
+		<div class="row mt-100 mb-100" >
+					<div class="col-lg-4 col-md-6 text-center strawberry" *ngFor="let m of platsTabs |myFilter:item">
+
+						<h3>{{m.name}}</h3>
+						<form #addForm="ngForm" (ngSubmit)="addToCart(m)">
+							<p><button type="button" class="cart-btn" (click)="detaillsPlat(m)">Details</button>
+							<div *ngIf="m.showDetails">
+								<p class="product-price">
+								<p>{{m.description}}</p>
+								<p><span>{{m.price}}dt</span></p>
+
+							</div>
+
+							<input type="number" placeholder="Quantity" name="quantity-{{m.id}}" required min="1"
+								[(ngModel)]="m.quantity">
+							<p><input type="submit" value="Add" class="cart-btn"></p>
+
+						</form>
+					</div>
+					</div>
+				</div>
+			</div>
+	

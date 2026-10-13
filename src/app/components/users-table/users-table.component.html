@@ -1,0 +1,34 @@
+<table class="table">
+  <thead>
+    <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>PhoneNumber</th>
+        <th>Specialty</th>
+        <th>Experience</th>
+        <th>Role</th>
+        <th>Actions</th>
+    </tr>
+  </thead>  
+  <tbody>
+    <tr  *ngFor="let m of usersTabs">
+        <td >{{m.id}}</td>
+        <td >{{m.firstName}}</td>
+         <td >{{m.lastName}}</td>
+          <td >{{m.email}}</td>
+          <td >{{m.phoneNumber}}</td>
+          <td >{{m.specialty}}</td>
+          <td >{{m.experience}}</td>
+          <td *ngFor="let r of m.roles">{{r.name}}</td>
+           <td>
+            <button  class="btn btn-info"  (click)="displayUser(m.email)">Display</button>
+            <button  class="btn btn-warning" (click)="editUser(m.id)">Edit</button>
+            <button  class="btn btn-danger" (click)="deleteUser(m.id)">Delete</button>
+           </td>
+    </tr>
+  </tbody>
+</table>
+
+

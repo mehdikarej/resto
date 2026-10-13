@@ -1,0 +1,54 @@
+<!-- header -->
+<div class="top-header-area" id="sticker">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-sm-12 text-center">
+				<div class="main-menu-wrap">
+					<!-- logo -->
+					<div class="site-logo">
+						<a href="index.html">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<!-- logo -->
+
+					<!-- menu start -->
+					<nav class="main-menu">
+						<ul>
+							<li class="current-list-item"><a routerLink="">Home</a>
+							</li>
+							<li><a routerLink="/addPlat" *ngIf="isLoggedIn()&&decoded.roles=='chief'">AddPlat</a></li>
+							<li><a routerLink="/reservation"
+									*ngIf="isLoggedIn()&&decoded.roles=='chief'">Reservation</a></li>
+							<li><a routerLink="/plats" *ngIf="isLoggedIn()&&decoded.roles=='client'">Plats</a></li>
+							<li><a routerLink="/myBasket" *ngIf="isLoggedIn()&&decoded.roles=='client'"
+									class="shopping-cart">
+									<i class="fas fa-shopping-cart"></i>
+								</a></li>
+							<li><a routerLink="/signup" *ngIf="!isLoggedIn()">SignUp</a>
+							</li>
+							<li><a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+							</li>
+							<li><a *ngIf="isLoggedIn()&&decoded.roles=='admin'">Dashbord</a>
+								<ul class="sub-menu">
+									<li><a routerLink="/admin">Admin</a></li>
+								</ul>
+							</li>
+							<li><a *ngIf="isLoggedIn()" (click)="logOut()">logOut</a></li>
+							<li><a routerLink="/contact">Contact</a></li>
+							<li>
+								<div class="header-icons">
+					
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+					<div class="mobile-menu"></div>
+					<!-- menu end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end header -->
